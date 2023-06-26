@@ -37,6 +37,7 @@ nav a.router-link-exact-active {
   <!-- <template> -->
 
     <template>
+      <div>
       <nav>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container">
@@ -66,9 +67,12 @@ nav a.router-link-exact-active {
               </a>
               <ul class="dropdown-menu" aria-labelledby="compositionDropdown">
                 <li><router-link to="/composition" class="dropdown-item">Reactive</router-link></li>
-                <li><router-link to="/composition2" class="dropdown-item">Ref</router-link></li>
-                <li><router-link to="/composition3" class="dropdown-item">Initialstate</router-link></li>
+                <li><router-link to="/ref" class="dropdown-item">Ref</router-link></li>
+                <li><router-link to="/initial" class="dropdown-item">Initialstate</router-link></li>
               </ul>
+            </li>
+            <li class="nav-item">
+              <router-link to="/crud" class="nav-link">CRUD</router-link>
             </li>
           </ul>
         </div>
@@ -87,6 +91,8 @@ nav a.router-link-exact-active {
   
   
   <router-view> </router-view>
+
+</div>
   </template>
   
   

@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
     <div class="container">
         <div class="contact ">
             <h1 class="display1">CONTACT US </h1>
@@ -44,9 +44,9 @@
                     EMAIL:{{ email }}
                 </h4>
                 <button @click="button = !button" type="button" class="btn btn-dark">SHOW DETAILS</button>
-                <!-- <button @click="button = !button">SHOW DETAILS</button>
-      -->
-            </div>
+              <button @click="button = !button">SHOW DETAILS</button>
+  -->
+            <!-- </div>
 
         </div>
     </div>
@@ -69,10 +69,11 @@ export default {
     computed: {
 
         display() {
-            if (this.button) {
-                return false
-            }
-            else return true
+            return !this.button;
+            // if (this.button) {
+            //     return false
+            // }
+            // else return true
         }
     }
 };
@@ -93,4 +94,48 @@ h4 {
     height: 30px;
     width: 30px;
 }
-</style>
+</style> -->  
+
+
+<template>
+    <div class="container">
+      <div class="contact">
+        <h1 class="display1">CONTACT US</h1>
+        <hr class="my-4">
+        <p class="text-white">
+          <strong>Have a question, feedback, or need assistance? We're here to help.</strong>
+  Rest of the content 
+ </p>
+  
+        <div>
+          <h4 v-if="display">CONTACT NUMBER: {{ contactno }}<br>ADDRESS: {{ address }}<br>EMAIL: {{ email }}</h4>
+          <button @click="button = !button" type="button" class="btn btn-dark">SHOW DETAILS</button>
+        </div>
+      </div>
+    </div>
+  </template>
+  
+  <script lang="ts">
+  import { defineComponent, ref, computed } from 'vue';
+  
+  export default defineComponent({
+    data() {
+      return {
+        contactno: 9994519917,
+        address: '123, mkp colony, coimbatore-641044',
+        email: 'kharishmitha@gmail.com',
+        button: true,
+      };
+    },
+  
+    computed: {
+      display(): boolean {
+        return !this.button;
+      },
+    },
+  });
+  </script>
+  
+  <style>
+  /* CSS styles */
+  </style>

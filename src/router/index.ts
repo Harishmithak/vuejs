@@ -2,6 +2,9 @@ import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import ContactView from '../views/ContactView.vue'
 import CompositionView from '../views/CompositionView.vue'
+import RefView from '../views/RefView.vue'
+import Initialstate from '../views/InitialstateView.vue'
+import CrudView from '../views/CrudView.vue'
 
 
 const routes: Array<RouteRecordRaw> = [
@@ -27,6 +30,21 @@ const routes: Array<RouteRecordRaw> = [
     path:'/composition',
     name:'composition',
     component: CompositionView
+  },
+  {
+    path:'/ref',
+    name:'ref',
+    component: RefView
+  },
+  {
+    path:'/initial',
+    name:'initial',
+    component: Initialstate
+  },
+  {
+    path:'/crud',
+    name:'crud',
+    component: CrudView
   }
 
 ]
